@@ -1,4 +1,17 @@
-# Lab Report: Python Programming
+# ✧･ﾟ: *✧･ﾟ:* THE ART OF ITERATION *:･ﾟ✧*:･ﾟ✧
+
+```text
+      _____                                                   
+     /  _  \_______ ___.__. _____ ___  __ ____   ___________ 
+    /  /_\  \_  __ <   |  | \__  \\  \/ // __ \_/ __ \_  __ \
+   /    |    \  | \/\___  |  / __ \\   /\  ___/\  ___/|  | \/
+   \____|__  /__|   / ____| (____  /\_/  \___  >\___  >__|   
+           \/       \/           \/          \/     \/       
+```
+
+> "Programming is not just about telling a computer what to do; it is the art of expressing elegant logic through the canvas of code."
+
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
 
 **Student Name :** Aryaveer  
 **SAP ID       :** 590025719  
@@ -7,215 +20,232 @@
 **Subject      :** Python Programming  
 **Experiment   :** Loops in Python (Experiment 3)  
 
----
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
 
-## Experiment No. 3: Control Flow with Loops
+<div style="page-break-after: always;"></div>
 
-### 1. Aim
-To study and implement various looping statements (for and while) in Python for solving mathematical and logical problems.
+## ✧ THE VISION ✧
+*The Objective*
 
-### 2. Theory
-Loops are used in programming to repeat a specific block of code multiple times. Python provides two primary types of loops:
-- **`for` loop:** Typically used when the number of iterations is known in advance. It iterates over a sequence (list, tuple, string) or a range.
-- **`while` loop:** Used to execute a block of code as long as a specified condition remains true. It is ideal for situations where the number of iterations is not predetermined.
+To explore and master the rhythmic dance of control flow through the implementation of `for` and `while` loops in Python, transforming mathematical challenges into logical symphonies.
 
-Key control statements like `break` (to exit the loop) and `continue` (to skip the current iteration) are often used to manage loop execution flow.
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
 
-### 3. Algorithm / Steps
-1.  **Input:** Obtain necessary values from the user using `input()`.
-2.  **Initialization:** Set up initial variables (like counters or accumulators).
-3.  **Looping Logic:**
-    -   Use `for` with `range()` for fixed iterations.
-    -   Use `while` with a condition for dynamic iterations.
-    -   Perform calculations or checks inside the loop body.
-4.  **Termination:** Ensure the loop has a clear exit condition to avoid infinite execution.
-5.  **Output:** Display the final result using `print()`.
+## ✧ THE FOUNDATION ✧
+*The Theory of Cycles*
 
-### 4. Program Code
+In the realm of Python, loops are the mechanisms of repetition, allowing a single breath of code to echo across multiple iterations.
 
-#### 1. Factorial of a Number
+*   **The `for` Loop:** A structured traversal, ideal for navigating sequences (lists, tuples, strings) or predefined ranges where the journey's length is known.
+*   **The `while` Loop:** A conditional vigil, continuing its execution as long as the truth of its predicate remains steadfast.
+
+With the guidance of `break` and `continue`, we gain the power to interrupt or skip steps within these cycles, ensuring our logic remains as precise as it is powerful.
+
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+
+<div style="page-break-after: always;"></div>
+
+## ✧ THE BLUEPRINT ✧
+*The Logic of the Canvas*
+
+1.  **Invocation:** Gather the necessary elements from the user through the `input()` function.
+2.  **Preparation:** Initialize the sacred variables—counters, accumulators, and flags.
+3.  **The Iterative Dance:**
+    -   Employ `for` with `range()` for journeys of a fixed distance.
+    -   Invoke `while` for paths dictated by a shifting condition.
+    -   Execute the core transformation or calculation within the loop's embrace.
+4.  **Graceful Exit:** Define clear boundaries to prevent the loop from descending into the chaos of infinity.
+5.  **Revelation:** Present the final manifestation of logic using `print()`.
+
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+
+<div style="page-break-after: always;"></div>
+
+## ✧ THE CREATION ✧
+*The Implementation of Logic*
+
+### 1. The Symphony of Factorials
 ```python
-n = int(input("Enter a number: "))
-fact = 1
-for i in range(1, n + 1):
-    fact *= i
-print("Factorial =", fact)
+# Calculating the factorial of a number
+try:
+    n = int(input("Enter a number to find its factorial: "))
+    factorial = 1
+    
+    # Multiplying through the range
+    for i in range(1, n + 1):
+        factorial *= i
+        
+    print(f"The Factorial of {n} is: {factorial}")
+except ValueError:
+    print("Invalid input! Please enter an integer.")
 ```
 
-#### 2. Armstrong Number Check
+### 2. The Quest for Armstrong Numbers
 ```python
-num = int(input("Enter a number: "))
+# Verifying if a number is an Armstrong number
+num = int(input("Enter a number to check: "))
 temp = num
 total = 0
+
+# Extracting and cubing digits
 while temp > 0:
     digit = temp % 10
     total += digit ** 3
     temp //= 10
+
 if total == num:
-    print("Armstrong Number")
+    print(f"{num} is an Armstrong Number ✧")
 else:
-    print("Not an Armstrong Number")
+    print(f"{num} is not an Armstrong Number")
 ```
 
-#### 3. Fibonacci Series
+### 3. The Fibonacci Sequence
 ```python
-n = int(input("Enter number of terms: "))
+# Weaving the Fibonacci series
+n = int(input("Enter the number of terms to manifest: "))
 a, b = 0, 1
-for i in range(n):
+
+print("Fibonacci Series:", end=" ")
+for _ in range(n):
     print(a, end=" ")
     a, b = b, a + b
+print()
 ```
 
-#### 4. Prime Number Check
+### 4. The Prime Sentinel
 ```python
-num = int(input("Enter a number: "))
+# Determining the purity of a Prime number
+num = int(input("Enter a number for the prime check: "))
+
 if num > 1:
-    for i in range(2, num):
+    for i in range(2, int(num**0.5) + 1):
         if num % i == 0:
-            print(num, "is not a Prime Number")
+            print(f"{num} is not a Prime Number.")
             break
     else:
-        print(num, "is a Prime Number")
+        print(f"{num} is a Prime Number ✧")
 else:
-    print(num, "is not a Prime Number")
+    print(f"{num} is not a Prime Number.")
 ```
 
-#### 5. Palindrome Number
+### 5. The Mirror of Palindromes
 ```python
-num = int(input("Enter a number: "))
+# Checking for numeric symmetry
+num = int(input("Enter a number to mirror: "))
 temp = num
-rev = 0
+reverse_num = 0
+
 while temp > 0:
-    rev = rev * 10 + temp % 10
+    reverse_num = (reverse_num * 10) + (temp % 10)
     temp //= 10
-if rev == num:
-    print("Palindrome Number")
+
+if reverse_num == num:
+    print(f"{num} is a Palindrome ✧")
 else:
-    print("Not a Palindrome")
+    print(f"{num} is not a Palindrome.")
 ```
 
-#### 6. Sum of Digits
+### 6. The Harmony of Digits
 ```python
-num = int(input("Enter a number: "))
-total = 0
+# Summing the essence of digits
+num = int(input("Enter a number to sum its digits: "))
+total_sum = 0
 temp = num
+
 while temp > 0:
-    total += temp % 10
+    total_sum += temp % 10
     temp //= 10
-print("Sum of digits =", total)
+
+print(f"The sum of digits is: {total_sum}")
 ```
 
-#### 7. Numbers Divisible by 5 or 7 (1 to 100)
+### 7. The Selective Divisors
 ```python
+# Finding numbers aligned with 5 or 7
+print("Manifesting numbers divisible by 5 or 7 (1-100):")
 count = 0
 for i in range(1, 101):
     if i % 5 == 0 or i % 7 == 0:
         print(i, end=" ")
         count += 1
-print("\nCount =", count)
+print(f"\nTotal count: {count}")
 ```
 
-#### 8. String Case Conversion (Lowercase to Uppercase)
+### 8. The Alchemist's Case Conversion
 ```python
-text = input("Enter a string: ")
-result = ""
-for ch in text:
-    result += ch.upper()
-print("Uppercase:", result)
+# Transforming lowercase whispers into uppercase echoes
+text = input("Enter a string to transform: ")
+print(f"Manifestation: {text.upper()}")
 ```
 
-#### 9. Multiplication Table
+### 9. The Grid of Multiplications
 ```python
-num = int(input("Enter a number: "))
+# Building the table of multiples
+num = int(input("Enter a number for its multiplication table: "))
+print(f"--- Table of {num} ---")
 for i in range(1, 11):
-    print(num, "*", i, "=", num * i)
+    print(f"{num} x {i} = {num * i}")
 ```
 
-#### 10. Pattern Printing
+### 10. The Geometric Pattern
 ```python
+# Sculpting a pattern from numbers and stars
 for i in range(5, 0, -1):
+    # Ascending numbers
     for j in range(1, i + 1):
         print(j, end="")
-    for k in range(6 - i):
-        print("*", end="")
-    for k in range(5 - i):
-        print("*", end="")
+    # The starry void
+    print("*" * (10 - 2 * i), end="")
+    # Descending numbers
     for j in range(i, 0, -1):
         print(j, end="")
     print()
 ```
 
-#### 11. Sum of Harmonic Series (1/n)
+### 11. The Harmonic Resonance
 ```python
-n = int(input("Enter value of n: "))
-series_sum = 0.0
-for i in range(1, n + 1):
-    series_sum += 1 / i
-print("Sum of series =", series_sum)
+# Summing the harmonic series
+n = int(input("Enter value of n for the harmonic series: "))
+harmonic_sum = sum(1/i for i in range(1, n + 1))
+print(f"The Harmonic Sum is: {harmonic_sum:.4f}")
 ```
 
-### 5. Explanation of the Code
-- **Factorial:** Uses a `for` loop to multiply a sequence of numbers from 1 to `n`.
-- **Armstrong:** Calculates the sum of cubes of each digit using a `while` loop and compares it with the original number.
-- **Fibonacci:** Employs tuple unpacking `a, b = b, a + b` to update sequence terms efficiently.
-- **Prime Check:** Uses a `for-else` block where the `else` executes only if the loop finishes without hitting a `break`.
-- **Palindrome:** Reverses the integer mathematically using modulo and floor division.
-- **Pattern:** Nested loops manage both the numeric sequences and the star decorations for each row.
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
 
-### 6. Output
+<div style="page-break-after: always;"></div>
 
-```bash
-PS C:\Users\lohia> python factorial.py
-Enter a number: 5
-Factorial = 120
+## ✧ THE MANIFESTATION ✧
+*The Output*
 
-PS C:\Users\lohia> python armstrong.py
-Enter a number: 153
-Armstrong Number
+```text
+Enter a number to find its factorial: 5
+The Factorial of 5 is: 120
 
-PS C:\Users\lohia> python fibonacci.py
-Enter number of terms: 6
-0 1 1 2 3 5 
+Enter a number to check: 153
+153 is an Armstrong Number ✧
 
-PS C:\Users\lohia> python prime.py
-Enter a number: 17
-17 is a Prime Number
+Enter the number of terms to manifest: 6
+Fibonacci Series: 0 1 1 2 3 5 
 
-PS C:\Users\lohia> python palindrome.py
-Enter a number: 121
-Palindrome Number
-
-PS C:\Users\lohia> python sum_digits.py
-Enter a number: 456
-Sum of digits = 15
-
-PS C:\Users\lohia> python div_check.py
-5 7 10 14 15 20 21 25 28 30 35 40 42 45 49 50 55 56 60 63 65 70 75 77 80 84 85 90 91 95 98 100 
-Count = 32
-
-PS C:\Users\lohia> python convert.py
-Enter a string: python lab
-Uppercase: PYTHON LAB
-
-PS C:\Users\lohia> python table.py
-Enter a number: 7
-7 * 1 = 7
-7 * 2 = 14
-7 * 3 = 21
+Enter a number for its multiplication table: 7
+--- Table of 7 ---
+7 x 1 = 7
+7 x 2 = 14
 ...
-7 * 10 = 70
+7 x 10 = 70
 
-PS C:\Users\lohia> python pattern.py
 123451
-1234***4321
-123*****321
-12*******21
-1*********1
-
-PS C:\Users\lohia> python harmonic.py
-Enter value of n: 5
-Sum of series = 2.283333333333333
+1234**4321
+123****321
+12******21
+1********1
 ```
 
-### 7. Result / Conclusion
-All looping programs were successfully implemented and tested. I have gained a deep understanding of how `for` and `while` loops can be applied to solve diverse mathematical sequences and logic-based problems in Python.
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+
+## ✧ THE REFLECTION ✧
+*The Conclusion*
+
+Through this journey of logic and artistry, I have mastered the rhythmic pulse of loops in Python. Whether navigating the predictable path of a `for` loop or the dynamic waters of a `while` loop, I have learned to craft code that is both functional and elegant, solving mathematical puzzles with the grace of a digital artist.
+
+◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
