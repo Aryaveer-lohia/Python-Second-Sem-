@@ -1,349 +1,250 @@
-# ✧･ﾟ: *✧･ﾟ:* THE ARCHITECTURE OF DATA & LOGIC *:･ﾟ✧*:･ﾟ✧
+# Technical Report: Advanced Data Structures & Functional Modularity (Exp 4, 5, 6)
 
-```text
-    ____        __         _____ __                     __                      
-   / __ \____ _/ /_____ _ / ___// /________  _______  __/ /___  __________  _____
-  / / / / __ `/ __/ __ `/ \__ \/ __/ ___/ / / / ___/ / / / __ \/ ___/ __ \/ ___/
- / /_/ / /_/ / /_/ /_/ / ___/ / /_/ /  / /_/ / /__  / / / /_/ / /  / /_/ (__  ) 
-/_____/\__,_/\__/\__,_/ /____/\__/_/   \__,_/\___/ /_/_/\____/_/   \____/____/  
-                                                                                
-```
+| Field | Details |
+| :--- | :--- |
+| **Architect** | Aryaveer Lohia |
+| **SAP ID** | 590025719 |
+| **Batch** | B18 |
+| **Subject** | Python Programming |
 
-> "In the garden of computation, data is the seed, and logic is the water that brings it to life. To code is to compose a symphony of information."
+--- ◈ ---
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+## ◈ Experiment No. 4: Strings & Sets
 
-**Student Name :** Aryaveer  
-**SAP ID       :** 590025719  
-**Batch        :** B18  
-**Course       :** B.Tech  
-**Subject      :** Python Programming  
-**Experiments  :** 4, 5, & 6  
+### ## ◈ Objective & Scope
+The objective is to explore advanced string manipulation techniques and leverage the mathematical properties of sets to manage unique data collections and perform efficient membership testing.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Conceptual Framework
+**Strings: Immutable Sequences**
+Strings in Python are immutable Unicode sequences. Operations such as slicing, indexing, and various string methods allow for complex text processing without altering the original data structure, ensuring data integrity.
 
-<div style="page-break-after: always;"></div>
+**Sets: Unordered Unique Collections**
+Sets are optimized for high-performance membership testing and eliminating duplicate entries. They support mathematical operations like Union, Intersection, and Difference, which are essential for relational data analysis.
 
-## ✧ EXPERIMENT NO. 4: STRINGS & SETS ✧
-*The Fabric of Text and the Purity of Collections*
+### ## ◈ Procedural Logic
+**Part A: Uppercase Analysis**
+1. Accept string input from the user.
+2. Iterate through the sequence to identify characters where the `isupper()` property is true.
+3. Compute the total count of uppercase occurrences.
 
-### ✧ THE VISION ✧
-*The Objective*
+**Part B: Lexical Extraction**
+1. Accept a multi-word sentence.
+2. Normalize the text by converting it to lowercase.
+3. Tokenize the sentence into individual words.
+4. Cast the collection into a `set` to extract unique lexical elements.
 
-To delve into the intricate manipulation of strings and harness the mathematical elegance of sets, transforming raw sequences into meaningful insights and unique collections.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE FOUNDATION ✧
-*The Theory of Elements*
-
-**Strings: The Immutable Verse**
-In Python, strings are more than mere characters; they are immutable sequences of Unicode, a tapestry that cannot be altered once woven. We navigate this tapestry through indexing and slicing, and transform its essence using methods like `upper()`, `split()`, and `join()`.
-
-**Sets: The Sacred Circle**
-A set is a collection of unique, unordered elements. It mirrors the mathematical ideal of a set, where duplicates are banished and operations like Union (`|`), Intersection (`&`), and Difference (`-`) allow us to compare and contrast collections with absolute precision.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE BLUEPRINT ✧
-*The Logic of the Canvas*
-
-**Part A: The Capital Sentinel**
-1.  Receive a string from the user's invocation.
-2.  Traverse each character with a vigilant `for` loop.
-3.  Identify uppercase letters using the `isupper()` oracle.
-4.  Maintain a sacred count of these majestic characters.
-
-**Part B: The Unique Lexicon**
-1.  Gather a sentence of many words.
-2.  Standardize the text to lowercase, removing the noise of case sensitivity.
-3.  Dissolve the sentence into a list of words.
-4.  Cast this list into a `set`, allowing the unique essence of each word to remain while duplicates fade away.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE CREATION ✧
-*The Implementation of Logic*
-
+### ## ◈ Technical Implementation
 ```python
-# --- Program 1: The Upper Case Sentinel ---
-def analyze_uppercase_majesty():
-    """Analyzes a string to count the majestic uppercase characters."""
-    text = input("Enter a string for majestic analysis: ")
+# --- Program 1: Uppercase Character Analysis ---
+def analyze_uppercase_frequency():
+    """Analyzes a string to count uppercase characters."""
+    text = input("Enter a string for analysis: ")
     count = sum(1 for char in text if char.isupper())
-    print(f"The tapestry contains {count} uppercase letters ✧")
+    print(f"Analysis complete: {count} uppercase characters identified.")
 
-# --- Program 2: The Alchemist's Unique Words ---
-def manifest_unique_words():
-    """Transforms a sentence into a set of unique, lowercase words."""
-    sentence = input("\nEnter a sentence to find its unique essence: ")
+# --- Program 2: Unique Lexical Extraction ---
+def extract_unique_lexicon():
+    """Transforms a sentence into a set of unique, normalized words."""
+    sentence = input("\nEnter a sentence to extract unique lexicon: ")
     
-    # Refining the words
+    # Text normalization and tokenization
     words = sentence.lower().split()
-    unique_essence = set(words)
+    unique_lexicon = set(words)
     
     print(f"Original Lexicon: {words}")
-    print(f"Unique Essence: {unique_essence}")
-    print(f"Total Unique Elements: {len(unique_essence)}")
+    print(f"Unique Lexicon: {unique_lexicon}")
+    print(f"Total Unique Elements: {len(unique_lexicon)}")
 
 if __name__ == "__main__":
-    analyze_uppercase_majesty()
-    manifest_unique_words()
+    analyze_uppercase_frequency()
+    extract_unique_lexicon()
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE MANIFESTATION ✧
-*The Output*
-
+### ## ◈ Execution & Validation
 ```text
-Enter a string for majestic analysis: Welcome to Python Programming Lab!
-The tapestry contains 4 uppercase letters ✧
+Enter a string for analysis: Welcome to Python Programming Lab!
+Analysis complete: 4 uppercase characters identified.
 
-Enter a sentence to find its unique essence: Python is great and Python is easy to learn
+Enter a sentence to extract unique lexicon: Python is great and Python is easy to learn
 Original Lexicon: ['python', 'is', 'great', 'and', 'python', 'is', 'easy', 'to', 'learn']
-Unique Essence: {'python', 'is', 'great', 'and', 'easy', 'to', 'learn'}
+Unique Lexicon: {'python', 'is', 'great', 'and', 'easy', 'to', 'learn'}
 Total Unique Elements: 7
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE REFLECTION ✧
-*The Conclusion*
-
-Through the study of Strings and Sets, I have learned to appreciate the balance between immutable sequences and unique collections. The ability to filter noise and extract the core essence of data is a fundamental skill in the art of programming.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Analysis & Synthesis
+The implementation demonstrates the efficiency of using sets for de-duplication and the utility of string methods for content analysis. These structures form the basis for more complex text processing and data normalization tasks.
 
 <div style="page-break-after: always;"></div>
 
-## ✧ EXPERIMENT NO. 5: LISTS, TUPLES, & DICTIONARIES ✧
-*The Containers of Complexity*
+--- ◈ ---
 
-### ✧ THE VISION ✧
-*The Objective*
+## ◈ Experiment No. 5: Lists, Tuples, & Dictionaries
 
-To master the diverse vessels of Python's data structures—the mutable List, the immutable Tuple, and the associative Dictionary—understanding when to embrace change and when to preserve state.
+### ## ◈ Objective & Scope
+To master the selection and implementation of Python's primary data containers—Lists, Tuples, and Dictionaries—based on their mutability and access performance characteristics.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Conceptual Framework
+**Lists: Dynamic Arrays**
+Lists are mutable, ordered sequences that support dynamic resizing and in-place modifications, making them ideal for collections that evolve during runtime.
 
-### ✧ THE FOUNDATION ✧
-*The Theory of Vessels*
+**Tuples: Immutable Records**
+Tuples provide a fixed-state alternative to lists, offering performance optimizations and ensuring that data remain constant throughout the program lifecycle.
 
-**Lists (`[]`): The Fluid Collection**
-Ordered and mutable, lists are the workhorses of data storage, allowing for growth, shrinkage, and transformation.
+**Dictionaries: Hash-Based Key-Value Pairs**
+Dictionaries facilitate O(1) average-time complexity for lookups, providing a highly efficient way to map unique keys to values.
 
-**Tuples (`()`): The Eternal Record**
-Once defined, a tuple is a constant, offering safety and performance where data must remain untouched.
+### ## ◈ Procedural Logic
+**Part A: Secondary Maximum Extraction**
+1. Ingest a list of numerical scores.
+2. Utilize a set to eliminate duplicate values.
+3. Sort the unique values in descending order.
+4. Extract the second element from the sorted sequence.
 
-**Dictionaries (`{}`): The Map of Keys**
-Associative arrays that link unique keys to values, providing a direct path to information with incredible efficiency.
+**Part B: Associative Data Lookup**
+1. Initialize a dictionary mapping names to contact identifiers.
+2. Query the dictionary using a user-provided key.
+3. Handle potential missing keys gracefully to ensure system stability.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE BLUEPRINT ✧
-*The Logic of the Canvas*
-
-**Part A: The Runner-Up Search**
-1.  Gather a collection of scores.
-2.  Purify the list using a `set` to remove duplicate heights.
-3.  Arrange the unique scores in descending order.
-4.  Select the second element—the runner-up—from this refined list.
-
-**Part B: The Digital Rolodex**
-1.  Initialize a Dictionary as a repository for names and numbers.
-2.  Allow the user to search this repository using a key (Name).
-3.  Retrieve and reveal the associated value (Phone Number) if the key exists.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE CREATION ✧
-*The Implementation of Logic*
-
+### ## ◈ Technical Implementation
 ```python
-# --- Program 1: The Runner-Up Score ---
-def find_runner_up_glory():
-    """Finds the second highest score among the participants."""
-    print("--- The Quest for the Runner-Up ---")
+# --- Program 1: Runner-Up Detection ---
+def detect_runner_up():
+    """Identifies the second highest score within a dataset."""
+    print("--- Execution: Runner-Up Detection ---")
     try:
         n = int(input("Enter number of participants: "))
-        scores = list(map(int, input("Enter scores separated by space: ").split()))
+        scores = list(map(int, input("Enter scores (space-separated): ").split()))
         
-        # Refining and sorting
+        # De-duplication and sorting
         unique_scores = sorted(list(set(scores)), reverse=True)
         
         if len(unique_scores) > 1:
-            print(f"The runner-up score is: {unique_scores[1]} ✧")
+            print(f"The runner-up score is: {unique_scores[1]}")
         else:
-            print("The scores are too uniform to find a runner-up.")
+            print("Insufficient unique data points for runner-up detection.")
     except ValueError:
-        print("Invalid input. Please enter numbers only.")
+        print("Error: Input must be numerical.")
 
-# --- Program 2: The Contact Grimoire ---
-def manage_contacts():
-    """A dictionary-based lookup for contact information."""
-    print("\n--- The Digital Contact Grimoire ---")
-    contacts = {
+# --- Program 2: Contact Registry System ---
+def manage_registry():
+    """Provides key-based lookup for contact information."""
+    print("\n--- Execution: Contact Registry Lookup ---")
+    registry = {
         "Aryaveer": "9876543210",
         "Rahul": "8887776665",
         "Sneha": "7776665554"
     }
     
-    query = input("Enter a name to summon their contact: ")
-    number = contacts.get(query)
+    query = input("Enter name for registry lookup: ")
+    result = registry.get(query)
     
-    if number:
-        print(f"The number for {query} is: {number} ✧")
+    if result:
+        print(f"Registry Result for {query}: {result}")
     else:
-        print("This name is not inscribed in our grimoire.")
+        print("Record not found in registry.")
 
 if __name__ == "__main__":
-    find_runner_up_glory()
-    manage_contacts()
+    detect_runner_up()
+    manage_registry()
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE MANIFESTATION ✧
-*The Output*
-
+### ## ◈ Execution & Validation
 ```text
---- The Quest for the Runner-Up ---
+--- Execution: Runner-Up Detection ---
 Enter number of participants: 5
-Enter scores separated by space: 23 45 45 12 30
-The runner-up score is: 30 ✧
+Enter scores (space-separated): 23 45 45 12 30
+The runner-up score is: 30
 
---- The Digital Contact Grimoire ---
-Enter a name to summon their contact: Aryaveer
-The number for Aryaveer is: 9876543210 ✧
+--- Execution: Contact Registry Lookup ---
+Enter name for registry lookup: Aryaveer
+Registry Result for Aryaveer: 9876543210
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE REFLECTION ✧
-*The Conclusion*
-
-The choice of a data structure is the first brushstroke of a programmer's masterpiece. I have learned that while lists offer versatility, dictionaries offer the speed and clarity required for complex data management.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Analysis & Synthesis
+Selecting the appropriate data structure is critical for architectural performance. This experiment highlights the trade-offs between mutability and lookup efficiency, demonstrating how dictionaries and sets can significantly optimize data retrieval.
 
 <div style="page-break-after: always;"></div>
 
-## ✧ EXPERIMENT NO. 6: THE ART OF FUNCTIONS ✧
-*Modular Logic and Elegant Abstractions*
+--- ◈ ---
 
-### ✧ THE VISION ✧
-*The Objective*
+## ◈ Experiment No. 6: Functional Abstraction & Recursion
 
-To explore the modular nature of Python through user-defined functions, the recursive echoes of logic, and the concise power of anonymous Lambda functions.
+### ## ◈ Objective & Scope
+To implement modular code through user-defined functions, recursive logic, and anonymous lambda expressions, focusing on code reusability and algorithmic clarity.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Conceptual Framework
+**Modular Functions**
+Encapsulating logic into functions promotes the DRY (Don't Repeat Yourself) principle and enhances maintainability.
 
-### ✧ THE FOUNDATION ✧
-*The Theory of Abstraction*
+**Recursive Logic**
+Recursion allows for the elegant solution of problems that exhibit self-similarity, where a function solves a base case and delegates smaller sub-problems to itself.
 
-**The Function: A Reusable Verse**
-Functions are the building blocks of modularity, allowing us to define a logic once and invoke it infinitely.
+**Lambda Expressions**
+Anonymous functions provide a concise syntax for defining small, one-off logical operations, often used as arguments for higher-order functions.
 
-**Recursion: The Echoing Logic**
-A function that calls itself, recursion is a powerful tool for solving problems that contain smaller versions of themselves, like the Fibonacci sequence.
+### ## ◈ Procedural Logic
+**Part A: Recursive Fibonacci Generation**
+1. Define base cases (0 and 1).
+2. Implement the recursive step: `F(n) = F(n-1) + F(n-2)`.
+3. Iterate through the desired range to manifest the sequence.
 
-**Lambda: The Anonymous Spark**
-Short, one-line functions that provide a concise way to define mathematical or logical operations on the fly.
+**Part B: Geometric Volume Calculation via Lambda**
+1. Define a lambda function implementing the formula: `V = (1/3) * π * r² * h`.
+2. Ingest dimensions and execute the lambda for immediate calculation.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE BLUEPRINT ✧
-*The Logic of the Canvas*
-
-**Part A: The Recursive Fibonacci**
-1.  Define a base case: `n=0` or `n=1`.
-2.  Define the recursive step: `f(n) = f(n-1) + f(n-2)`.
-3.  Invoke the function iteratively to manifest the sequence.
-
-**Part B: The Geometric Lambda**
-1.  Craft a Lambda function for the volume of a cone: `V = (1/3)πr²h`.
-2.  Invoke this anonymous spark with user-provided dimensions.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-### ✧ THE CREATION ✧
-*The Implementation of Logic*
-
+### ## ◈ Technical Implementation
 ```python
 import math
 
-# --- The Recursive Echo ---
+# --- Recursive Algorithm ---
 def fibonacci_recursive(n):
-    """Calculates the n-th Fibonacci term through recursive echoes."""
+    """Calculates the n-th Fibonacci term via recursive delegation."""
     if n <= 1:
         return n
     return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
 
-# --- The Lambda Spark ---
-# Geometric Volume of a Cone: (1/3) * pi * r^2 * h
+# --- Anonymous Functional Spark ---
+# Formula: (1/3) * pi * r^2 * h
 calculate_cone_volume = lambda r, h: (1/3) * math.pi * (r**2) * h
 
-def main_orchestration():
-    """Orchestrates the demonstration of functions."""
-    # 1. Manifesting the Fibonacci Sequence
-    print("--- The Fibonacci Manifestation ---")
+def orchestrate_functions():
+    """Orchestrates the demonstration of functional paradigms."""
+    # 1. Recursive Sequence Manifestation
+    print("--- Execution: Fibonacci Recursion ---")
     try:
-        limit = int(input("How many terms shall we manifest? "))
+        limit = int(input("Enter number of terms: "))
         print("Sequence:", end=" ")
         for i in range(limit):
             print(fibonacci_recursive(i), end=" ")
         print()
     except ValueError:
-        print("Please enter a valid integer.")
+        print("Error: Input must be an integer.")
 
-    # 2. Calculating Geometric Volume
-    print("\n--- The Geometric Lambda ---")
+    # 2. Anonymous Geometric Calculation
+    print("\n--- Execution: Lambda-Based Geometric Analysis ---")
     try:
-        radius = float(input("Enter the radius of the cone: "))
-        height = float(input("Enter the height of the cone: "))
+        radius = float(input("Enter cone radius: "))
+        height = float(input("Enter cone height: "))
         volume = calculate_cone_volume(radius, height)
-        print(f"The Volume of the cone is: {volume:.4f} ✧")
+        print(f"Calculated Volume: {volume:.4f}")
     except ValueError:
-        print("Invalid dimensions provided.")
+        print("Error: Invalid dimensions provided.")
 
 if __name__ == "__main__":
-    main_orchestration()
+    orchestrate_functions()
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE MANIFESTATION ✧
-*The Output*
-
+### ## ◈ Execution & Validation
 ```text
---- The Fibonacci Manifestation ---
-How many terms shall we manifest? 10
+--- Execution: Fibonacci Recursion ---
+Enter number of terms: 10
 Sequence: 0 1 1 2 3 5 8 13 21 34 
 
---- The Geometric Lambda ---
-Enter the radius of the cone: 5
-Enter the height of the cone: 7
-The Volume of the cone is: 183.2596 ✧
+--- Execution: Lambda-Based Geometric Analysis ---
+Enter cone radius: 5
+Enter cone height: 7
+Calculated Volume: 183.2596
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-### ✧ THE REFLECTION ✧
-*The Conclusion*
-
-Modular programming is the bridge between complexity and clarity. Through functions and recursion, I have learned to decompose large problems into elegant, manageable pieces. Lambda functions have taught me the beauty of brevity in logic.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+### ## ◈ Analysis & Synthesis
+Functional modularity is the cornerstone of clean architecture. This experiment validates that recursion and lambdas, while different in syntax and execution, both contribute to creating a more readable and efficient codebase.

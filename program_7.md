@@ -1,168 +1,126 @@
-# ✧･ﾟ: *✧･ﾟ:* THE SCRIBE & THE SENTINEL *:･ﾟ✧*:･ﾟ✧
+# Technical Report: Data Persistence & Fault-Tolerant Systems (Exp 7)
 
-```text
-      __________
-     /         /|
-    /         / |
-   /________ /  |
-  |  ______  |  |
-  | |      | |  |
-  | | SCRIBE | |  |
-  | |______| |  |
-  |__________| /
-  (__________) /
-```
+| Field | Details |
+| :--- | :--- |
+| **Architect** | Aryaveer Lohia |
+| **SAP ID** | 590025719 |
+| **Batch** | B18 |
+| **Subject** | Python Programming |
 
-> "In the sanctuary of code, the Scribe inscribes the truth onto the stone of the disk, while the Sentinel stands guard against the shadows of the unexpected."
+--- ◈ ---
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+## ◈ Objective & Scope
+The objective is to implement robust data persistence mechanisms using Python's file I/O capabilities and to design fault-tolerant systems through comprehensive exception handling. The scope covers text-based data storage, retrieval, and the management of runtime anomalies.
 
-**Student Name :** Aryaveer  
-**SAP ID       :** 590025719  
-**Batch        :** B18  
-**Course       :** B.Tech  
-**Subject      :** Python Programming  
-**Experiment   :** File Handling and Exception Handling (Experiment 7)  
+## ◈ Conceptual Framework
+**Data Persistence (File I/O):**
+Persistent storage allows applications to retain state beyond the execution lifecycle. Python's `open()` function, combined with the `with` context manager, ensures safe resource allocation and deallocation (RAII principle), preventing file handle leaks.
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+**Fault Tolerance (Exception Handling):**
+Resilient software must anticipate and gracefully handle runtime errors. The `try-except-finally` construct allows for the redirection of execution flow when anomalies (e.g., `IOError`, `ValueError`) occur, ensuring system stability.
 
-<div style="page-break-after: always;"></div>
+## ◈ Procedural Logic
+1.  **Data Inscription:** Populate files with structured data (names, numerical records) using the `write()` method.
+2.  **Data Transformation:** Retrieve and parse inscribed data, converting raw strings into typed collections (e.g., lists of integers).
+3.  **Resilience Integration:** Wrap I/O and parsing logic in `try` blocks to manage resource-level and data-level faults.
+4.  **Custom Fault Oracles:** Define specialized exception classes to handle domain-specific anomalies.
 
-## ✧ THE VISION ✧
-*The Objective*
+--- ◈ ---
 
-To master the art of data persistence through File Handling and to forge a resilient architecture using Exception Handling, ensuring our programs are both enduring and robust.
+## ◈ Technical Implementation
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-## ✧ THE FOUNDATION ✧
-*The Theory of Persistence & Resilience*
-
-**The Scribe (File Handling):**
-In Python, we breathe life into data by saving it to external files. Using the `open()` invocation and the sacred `with` statement, we ensure that every inscription is closed and protected, whether reading (`'r'`), writing (`'w'`), or appending (`'a'`).
-
-**The Sentinel (Exception Handling):**
-The world is full of the unexpected—missing files, divisions by zero, and invalid whispers. Through the `try-except` block, we station a guard to catch these anomalies, allowing our logic to continue its dance without the tragedy of a crash.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-## ✧ THE BLUEPRINT ✧
-*The Logic of the Canvas*
-
-1.  **Inscription:** Populate files with names, numbers, and city data using the `write()` method.
-2.  **Transmutation:** Read back the inscribed data, transforming raw text into meaningful structures like lists of integers or floating-point records.
-3.  **Vigilance:** Wrap every interaction with the external world (Files) or risky logic (Math) in the protective embrace of a `try` block.
-4.  **Custom Oracle:** Define unique error classes for specialized anomalies, raising them when the sanctity of data is breached.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-<div style="page-break-after: always;"></div>
-
-## ✧ THE CREATION ✧
-*The Implementation of Logic*
-
-### 1. The Roll of Names
+### 1. Lexical Record Analysis
 ```python
-# Inscribing and analyzing names
+# Inscribing and analyzing lexical records
 try:
-    with open("name.txt", "w") as f:
+    with open("lexicon.txt", "w") as f:
         names = ["Aman", "Neha", "Ishita", "Om", "Ravi", "Uday"]
         for name in names:
             f.write(f"{name}\n")
             
-    with open("name.txt", "r") as f:
-        names = [line.strip() for line in f]
+    with open("lexicon.txt", "r") as f:
+        records = [line.strip() for line in f]
         
-    print(f"Total names inscribed: {len(names)} ✧")
+    print(f"Total records synchronized: {len(records)}")
     
+    # Analysis: Prefix-based filtering
     vowels = ('A', 'E', 'I', 'O', 'U')
-    count_vowel = sum(1 for n in names if n.upper().startswith(vowels))
-    print(f"Names beginning with a vowel: {count_vowel}")
+    prefix_match_count = sum(1 for n in records if n.upper().startswith(vowels))
+    print(f"Records with vowel prefix: {prefix_match_count}")
     
-    longest_name = max(names, key=len)
-    print(f"The longest name in the scroll: {longest_name}")
+    longest_record = max(records, key=len)
+    print(f"Maximum record length identified: {longest_record}")
     
 except Exception as e:
-    print(f"The Scribe encountered an anomaly: {e}")
+    print(f"I/O Analysis Fault: {e}")
 ```
 
-### 2. The Ledger of Numbers
+### 2. Numerical Ledger Processing
 ```python
-# Processing numerical records from the disk
+# Processing persistent numerical datasets
 try:
-    with open("numbers.txt", "w") as f:
-        nums = [10, 150, 200, 45, 99, 120, 300]
-        for n in nums:
-            f.write(f"{n}\n")
+    with open("ledger.txt", "w") as f:
+        entries = [10, 150, 200, 45, 99, 120, 300]
+        for e in entries:
+            f.write(f"{e}\n")
             
-    with open("numbers.txt", "r") as f:
-        nums = [int(line.strip()) for line in f]
+    with open("ledger.txt", "r") as f:
+        data_points = [int(line.strip()) for line in f]
         
-    print(f"Maximum record found: {max(nums)} ✧")
-    print(f"Average of the ledger: {sum(nums)/len(nums):.2f}")
+    print(f"Peak value in ledger: {max(data_points)}")
+    print(f"Mean value of dataset: {sum(data_points)/len(data_points):.2f}")
     
-    threshold_count = sum(1 for n in nums if n > 100)
-    print(f"Records transcending 100: {threshold_count}")
+    # Threshold filtering
+    outliers = sum(1 for e in data_points if e > 100)
+    print(f"Entries exceeding threshold (100): {outliers}")
     
 except Exception as e:
-    print(f"Numerical processing anomaly: {e}")
+    print(f"Data Processing Fault: {e}")
 ```
 
-### 3. The Custom Sentinel
+### 3. Custom Exception Architectures
 ```python
-class VoidFileError(Exception):
-    """Raised when a file contains no truth."""
+class NullResourceError(Exception):
+    """Raised when a target resource contains no data."""
     pass
 
-class CorruptDataError(Exception):
-    """Raised when the data contains forbidden characters."""
+class DataIntegrityError(Exception):
+    """Raised when data fails format validation."""
     pass
 
-def validate_shrine_data(filename):
-    """Validates the contents of a data file with custom oracles."""
+def audit_resource_integrity(filename):
+    """Audits the integrity of a persistent resource."""
     try:
         with open(filename, "r") as f:
-            data = f.read()
-            if not data:
-                raise VoidFileError("The file is a void!")
-            if not data.replace("\n", "").isalnum():
-                raise CorruptDataError("Forbidden characters detected!")
-            print("The data is pure and valid ✧")
+            content = f.read()
+            if not content:
+                raise NullResourceError("Resource is empty.")
+            if not content.replace("\n", "").isalnum():
+                raise DataIntegrityError("Non-alphanumeric characters identified.")
+            print("Resource Audit: Integrity Validated.")
     except FileNotFoundError:
-        print("The shrine file has vanished from the plane.")
-    except (VoidFileError, CorruptDataError) as e:
-        print(f"Custom Oracle: {e}")
+        print("System Error: Resource not found on disk.")
+    except (NullResourceError, DataIntegrityError) as e:
+        print(f"Audit Exception: {e}")
 
-validate_shrine_data("data.txt")
+audit_resource_integrity("audit_target.txt")
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+--- ◈ ---
 
-<div style="page-break-after: always;"></div>
-
-## ✧ THE MANIFESTATION ✧
-*The Output*
-
+## ◈ Execution & Validation
 ```text
-Total names inscribed: 6 ✧
-Names beginning with a vowel: 3
-The longest name in the scroll: Ishita
+Total records synchronized: 6
+Records with vowel prefix: 3
+Maximum record length identified: Ishita
 
-Maximum record found: 300 ✧
-Average of the ledger: 134.86
-Records transcending 100: 4
+Peak value in ledger: 300
+Mean value of dataset: 134.86
+Entries exceeding threshold (100): 4
 
-The shrine file has vanished from the plane.
-Program executed 1 times ✧
+System Error: Resource not found on disk.
+Audit Status: Execution complete.
 ```
 
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
-
-## ✧ THE REFLECTION ✧
-*The Conclusion*
-
-Through this journey of persistence and resilience, I have learned that a program's true strength lies not just in its logic, but in its ability to remember and its courage to face errors. By mastering File Handling and Exception Handling, I have built a bridge between the transient execution of code and the enduring reality of data.
-
-◈━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◈
+## ◈ Analysis & Synthesis
+Establishing reliable data persistence and fault-tolerant architectures is essential for professional software development. By utilizing context managers for file handling and structured exception hierarchies for error management, we ensure that our systems are both enduring and resilient under diverse operational conditions.
