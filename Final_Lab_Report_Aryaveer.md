@@ -1,6 +1,8 @@
 <div align="center">
 
-
+# 🐍 PYTHON PROGRAMMING (CSL210)
+## THE TECHNICAL ARTISTRY OF ALGORITHMS
+### COMPREHENSIVE LABORATORY DOSSIER
 
 <br>
 
@@ -24,19 +26,19 @@
 
 # 📑 TABLE OF CONTENTS
 
-| Index | Experiment Title | Page |
-| :--- | :--- | :--- |
+| Index | Experiment / Section Title | Page |
+| :---: | :--- | :---: |
 | 01 | **Syntax Foundations & Logical Branching (Exp 1 & 2)** | 03 |
-| 02 | **Control Flow & Iterative Optimization (Exp 3)** | -- |
-| 03 | **Advanced Data Structures & Functional Modularity (Exp 4, 5, 6)** | -- |
-| 04 | **Data Persistence & Fault-Tolerant Systems (Exp 7)** | -- |
-| 05 | **Graphical Interfaces & Relational Persistence (Lab 8)** | -- |
-| 06 | **Object-Oriented Systems & Polymorphic Architectures (Exp 9)** | -- |
-| 07 | **Comprehensive Python Engineering Portfolio (Final)** | -- |
+| 02 | **Control Flow & Iterative Optimization (Exp 3)** | 06 |
+| 03 | **Advanced Data Structures & Functional Modularity (Exp 4, 5, 6)** | 09 |
+| 04 | **Data Persistence & Fault-Tolerant Systems (Exp 7)** | 14 |
+| 05 | **Graphical Interfaces & Relational Persistence (Lab 8)** | 17 |
+| 06 | **Object-Oriented Systems & Polymorphic Architectures (Exp 9)** | 22 |
+| 07 | **Comprehensive Python Engineering Portfolio (Final Project)** | 26 |
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Syntax Foundations & Logical Branching (Exp 1 & 2)
+# ◈ Syntax Foundations & Logical Branching (Exp 1 & 2)
 
 | Field | Details |
 | :--- | :--- |
@@ -139,7 +141,7 @@ Mastering the foundations of syntax and conditional logic is paramount for any s
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Control Flow & Iterative Optimization (Exp 3)
+# ◈ Control Flow & Iterative Optimization (Exp 3)
 
 | Field | Details |
 | :--- | :--- |
@@ -282,7 +284,7 @@ Iterative control flow is a critical component of software architecture. Through
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Advanced Data Structures & Functional Modularity (Exp 4, 5, 6)
+# ◈ Advanced Data Structures & Functional Modularity (Exp 4, 5, 6)
 
 | Field | Details |
 | :--- | :--- |
@@ -355,12 +357,7 @@ Unique Lexicon: {'python', 'is', 'great', 'and', 'easy', 'to', 'learn'}
 Total Unique Elements: 7
 ```
 
-### ## ◈ Analysis & Synthesis
-The implementation demonstrates the efficiency of using sets for de-duplication and the utility of string methods for content analysis. These structures form the basis for more complex text processing and data normalization tasks.
-
 <div style="page-break-after: always;"></div>
-
---- ◈ ---
 
 ## ◈ Experiment No. 5: Lists, Tuples, & Dictionaries
 
@@ -444,12 +441,7 @@ Enter name for registry lookup: Aryaveer
 Registry Result for Aryaveer: 9876543210
 ```
 
-### ## ◈ Analysis & Synthesis
-Selecting the appropriate data structure is critical for architectural performance. This experiment highlights the trade-offs between mutability and lookup efficiency, demonstrating how dictionaries and sets can significantly optimize data retrieval.
-
 <div style="page-break-after: always;"></div>
-
---- ◈ ---
 
 ## ◈ Experiment No. 6: Functional Abstraction & Recursion
 
@@ -531,11 +523,11 @@ Calculated Volume: 183.2596
 ```
 
 ### ## ◈ Analysis & Synthesis
-Functional modularity is the cornerstone of clean architecture. This experiment validates that recursion and lambdas, while different in syntax and execution, both contribute to creating a more readable and efficient codebase.
+The implementation of advanced data structures and functional paradigms demonstrates a comprehensive understanding of Python's architectural flexibility. Functional modularity is the cornerstone of clean architecture. This experiment validates that recursion and lambdas both contribute to creating a more readable and efficient codebase.
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Data Persistence & Fault-Tolerant Systems (Exp 7)
+# ◈ Data Persistence & Fault-Tolerant Systems (Exp 7)
 
 | Field | Details |
 | :--- | :--- |
@@ -615,6 +607,8 @@ except Exception as e:
     print(f"Data Processing Fault: {e}")
 ```
 
+<div style="page-break-after: always;"></div>
+
 ### 3. Custom Exception Architectures
 ```python
 class NullResourceError(Exception):
@@ -664,7 +658,7 @@ Establishing reliable data persistence and fault-tolerant architectures is essen
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Graphical Interfaces & Relational Persistence (Lab 8)
+# ◈ Graphical Interfaces & Relational Persistence (Lab 8)
 
 | Field | Details |
 | :--- | :--- |
@@ -680,7 +674,7 @@ The objective is to architect desktop applications using the Tkinter framework a
 
 ## ◈ Conceptual Framework
 **Graphical User Interface (GUI):**
-The GUI layer (Tkinter) serves as the primary interface for human-system interaction. By employing an event-driven programming model, we can respond to user-triggered events (clicks, keypresses) through specialized handlers, creating a dynamic and interactive experience.
+The GUI layer (Tkinter) serves as the primary interface for human-system interaction. By employing an event-driven programming model, we can respond to user-triggered events through specialized handlers, creating a dynamic and interactive experience.
 
 **Relational Persistence (SQLite):**
 To ensure data longevity beyond the application session, we utilize SQLite—a lightweight, serverless relational database engine. Integrating the UI with a persistent backend allows for the storage and retrieval of structured data, essential for professional-grade software solutions.
@@ -715,14 +709,7 @@ if __name__ == "__main__":
     initialize_root_window()
 ```
 
-### ## ◈ Execution & Validation
-```text
-> System Status: Initializing Window...
-> Configuration: Title="System Interface Prototype" | Dimensions=400x300
-> Status: Window state locked (non-resizable).
-```
-
---- ◈ ---
+<div style="page-break-after: always;"></div>
 
 ## Experiment 2: The Arithmetic Logic Engine
 
@@ -782,14 +769,7 @@ if __name__ == "__main__":
     build_arithmetic_engine()
 ```
 
-### ## ◈ Execution & Validation
-```text
-> Engine: Initialized.
-> Trace: Input sequence '12 * 5'
-> Result: '60' displayed.
-```
-
---- ◈ ---
+<div style="page-break-after: always;"></div>
 
 ## Experiment 3: Persistent Registry System
 
@@ -849,21 +829,14 @@ if __name__ == "__main__":
     setup_registry_ui()
 ```
 
-### ## ◈ Execution & Validation
-```text
-> Database: Connected to 'registry.db'
-> Input: Name='Aryaveer' | Course='B.Tech CSE'
-> Status: SQL COMMIT successful.
-```
-
 --- ◈ ---
 
 ## ◈ Analysis & Synthesis
-The integration of Tkinter and SQLite provides a robust architectural pattern for developing modern desktop applications. This experiment confirms that separating the visual presentation layer from the persistent data layer is essential for creating scalable, maintainable, and secure software systems. The use of parameterized queries and event-driven logic highlights the transition from basic scripting to professional application engineering.
+The integration of Tkinter and SQLite provides a robust architectural pattern for developing modern desktop applications. This experiment confirms that separating the visual presentation layer from the persistent data layer is essential for creating scalable, maintainable, and secure software systems.
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Object-Oriented Systems & Polymorphic Architectures (Exp 9)
+# ◈ Object-Oriented Systems & Polymorphic Architectures (Exp 9)
 
 | Field | Details |
 | :--- | :--- |
@@ -887,12 +860,11 @@ Object-Oriented Programming in Python treats all entities as objects, emphasizin
 ## ◈ Procedural Logic
 1.  **System Modeling:** Define classes with `__init__` constructors to initialize object states.
 2.  **State Management:** Implement methods to expose and manipulate internal data safely.
-3.  **Hierarchy Design:** Explore diverse inheritance patterns:
-    -   *Single:* Linear parent-child relationship.
-    -   *Multiple:* Deriving behavior from multiple source classes.
-    -   *Multilevel:* Establishing multi-generational lineages.
+3.  **Hierarchy Design:** Explore diverse inheritance patterns.
 4.  **Behavioral Specialization:** Override parent methods to provide specific implementations in derived classes.
 5.  **Syntactic Extension:** Overload standard operators (e.g., `+`) to enable intuitive interactions between custom objects.
+
+--- ◈ ---
 
 ## ◈ Technical Implementation
 
@@ -923,13 +895,9 @@ class Student:
     def determine_result(self):
         """Validates if marks meet the minimum threshold of 40 in all subjects."""
         return "Pass" if all(mark > 40 for mark in self.marks.values()) else "Fail"
-
-def calculate_class_average(student_list):
-    """Computes the mean percentage for a cohort of students."""
-    if not student_list:
-        return 0
-    return sum(s.calculate_percentage() for s in student_list) / len(student_list)
 ```
+
+<div style="page-break-after: always;"></div>
 
 ### 2. Inheritance Patterns & Lineage
 ```python
@@ -973,21 +941,11 @@ class Vector2D:
 
 ## ◈ Execution & Validation
 ```text
-Enter number of students: 2
-
 --- System Profile: Aryaveer ---
 SAP ID: 500123456
 Academic Record: {'Physics': 85.0, 'Chemistry': 90.0, 'Maths': 88.0}
 Percentage: 87.67%
 Result: Pass
-
---- System Profile: John Doe ---
-SAP ID: 500123457
-Academic Record: {'Physics': 35.0, 'Chemistry': 75.0, 'Maths': 60.0}
-Percentage: 56.67%
-Result: Fail
-
-Class Average Percentage: 72.17%
 
 --- Operator Overloading Validation ---
 Vector 1: Vector2D(x=10, y=20)
@@ -1000,7 +958,7 @@ The implementation of OOP principles significantly enhances the modularity and e
 
 <div style="page-break-after: always;"></div>
 
-# Technical Report: Comprehensive Python Engineering Portfolio (Final)
+# ◈ Comprehensive Python Engineering Portfolio (Final Project)
 
 | Field | Details |
 | :--- | :--- |
@@ -1012,25 +970,19 @@ The implementation of OOP principles significantly enhances the modularity and e
 --- ◈ ---
 
 ## ◈ Objective & Scope
-This portfolio serves as a comprehensive technical audit of a multi-disciplinary development journey within the Python ecosystem. It documents the transition from fundamental algorithmic logic to advanced system-level integrations, including database management and graphical user interfaces. The scope encompasses the design, implementation, and validation of robust, scalable software solutions.
+This portfolio serves as a comprehensive technical audit of a multi-disciplinary development journey within the Python ecosystem. It documents the transition from fundamental algorithmic logic to advanced system-level integrations, including database management and graphical user interfaces.
 
 ## ◈ Conceptual Framework
 The curriculum focused on five primary architectural pillars:
-*   **Dynamic Execution Logic:** Leveraging Python's dynamic typing and high-level abstractions for rapid prototyping.
+*   **Dynamic Execution Logic:** Leveraging Python's dynamic typing and abstractions.
 *   **Iterative & Flow Control:** Implementing optimized loops and decision-making structures.
-*   **Functional Modularity:** Decomposing complex systems into reusable, decoupled functional units.
-*   **Data Persistence & I/O:** Establishing reliable links between volatile memory and permanent storage systems (Files & SQL).
-*   **Human-Computer Interaction (HCI):** Designing intuitive graphical interfaces to facilitate user engagement.
+*   **Functional Modularity:** Decomposing complex systems into reusable, decoupled units.
+*   **Data Persistence & I/O:** Establishing reliable links between volatile memory and permanent storage.
+*   **Human-Computer Interaction (HCI):** Designing intuitive graphical interfaces.
 
 --- ◈ ---
 
 ## Section I: Foundations & Decision Architecture
-*Experiments 1 & 2: Syntax & Logic*
-
-### ## ◈ Procedural Logic
-1.  **Library Integration:** Utilize the `math` module for high-precision geometric computations.
-2.  **Conditional Branching:** Implement temporal logic to evaluate Gregorian calendar anomalies (Leap Years).
-
 ### ## ◈ Technical Implementation
 ```python
 import math
@@ -1045,28 +997,14 @@ def evaluate_leap_year(year):
         return f"Year {year}: Leap Cycle Validated"
     return f"Year {year}: Standard Cycle"
 
-# System Validation
+# Validation
 print(f"Magnitude: {calculate_diagonal_magnitude(3, 4)}")
 print(evaluate_leap_year(2024))
 ```
 
-### ## ◈ Execution & Validation
-```text
-Magnitude: 5.0
-Year 2024: Leap Cycle Validated
-```
-
 <div style="page-break-after: always;"></div>
 
---- ◈ ---
-
 ## Section II: Control Flow & State Management
-*Experiment 3: Optimized Iteration*
-
-### ## ◈ Procedural Logic
-1.  **Stateful Loops:** Implement `while` loops for digit-level decomposition and `for` loops for sequence generation.
-2.  **Tuple Unpacking:** Utilize Pythonic assignment for efficient state transitions in sequence calculations.
-
 ### ## ◈ Technical Implementation
 ```python
 def validate_armstrong_property(num):
@@ -1087,30 +1025,12 @@ def generate_fibonacci_sequence(n):
         a, b = b, a + b
     return sequence
 
-# System Validation
-target_num = 153
-print(f"Armstrong Validation ({target_num}): {validate_armstrong_property(target_num)}")
+# Validation
+print(f"Armstrong Validation (153): {validate_armstrong_property(153)}")
 print(f"Sequence Generation (n=5): {generate_fibonacci_sequence(5)}")
 ```
 
-### ## ◈ Execution & Validation
-```text
-Armstrong Validation (153): True
-Sequence Generation (n=5): [0, 1, 1, 2, 3]
-```
-
-<div style="page-break-after: always;"></div>
-
---- ◈ ---
-
 ## Section III: Advanced Structures & Functional Modularity
-*Experiments 4, 5 & 6: Collections & Abstraction*
-
-### ## ◈ Procedural Logic
-1.  **Memory Management:** Differentiate between mutable (Lists) and immutable (Tuples) data structures for optimized memory allocation.
-2.  **Functional Delegates:** Implement lambda expressions for lightweight mathematical mapping.
-3.  **Recursive Optimization:** Design self-referential functions to solve nested sub-problems.
-
 ### ## ◈ Technical Implementation
 ```python
 import math
@@ -1120,71 +1040,36 @@ compute_volume = lambda r, h: (1/3) * math.pi * (r**2) * h
 
 def recursive_factorial(n):
     """Implements factorial calculation via recursive delegation."""
-    if n == 0:
-        return 1
+    if n == 0: return 1
     return n * recursive_factorial(n - 1)
 
-# System Validation
+# Validation
 print(f"Computed Volume: {compute_volume(5, 10):.2f}")
 print(f"Recursive Factorial (5): {recursive_factorial(5)}")
 ```
 
-### ## ◈ Execution & Validation
-```text
-Computed Volume: 261.80
-Recursive Factorial (5): 120
-```
-
 <div style="page-break-after: always;"></div>
 
---- ◈ ---
-
 ## Section IV: Data Persistence & Exception Handling
-*Experiment 7: File I/O & Resilience*
-
-### ## ◈ Procedural Logic
-1.  **Disk I/O:** Utilize context managers for safe and reliable file operations.
-2.  **Fault Tolerance:** Implement `try-except` blocks to manage runtime anomalies and maintain system integrity.
-
 ### ## ◈ Technical Implementation
 ```python
 def analyze_geographic_data():
     """Reads and parses geographic datasets with integrated error handling."""
     try:
-        # Initializing persistent storage
         with open("geo_data.txt", "w") as f:
             f.write("Dehradun,5.7,308\nDelhi,190,1484")
-        
-        # Data Extraction
         with open("geo_data.txt", "r") as f:
             for line in f:
                 name, pop, area = line.strip().split(",")
                 if float(pop) > 10:
                     print(f"Analysis: High-Density Hub Detected -> {name}")
-    except FileNotFoundError:
-        print("System Error: Persistent resource unavailable.")
     except Exception as e:
-        print(f"Unexpected Exception: {e}")
+        print(f"System Error: {e}")
 
 analyze_geographic_data()
 ```
 
-### ## ◈ Execution & Validation
-```text
-Analysis: High-Density Hub Detected -> Delhi
-```
-
-<div style="page-break-after: always;"></div>
-
---- ◈ ---
-
 ## Section V: GUI Engineering & Relational Integration
-*Lab 8: Human-Interface & SQL Connectivity*
-
-### ## ◈ Procedural Logic
-1.  **N-Tier Architecture:** Separate visual presentation (Tkinter) from data persistence (SQLite).
-2.  **Query Sanitization:** Use parameterized SQL statements to mitigate injection vulnerabilities.
-
 ### ## ◈ Technical Implementation
 ```python
 import sqlite3
@@ -1194,24 +1079,15 @@ def verify_authentication(username, password):
     try:
         connection = sqlite3.connect("system_auth.db")
         cursor = connection.cursor()
-        # Parameterized execution for security
         cursor.execute("SELECT * FROM users WHERE uname=? AND pass=?", (username, password))
-        
         return "Authentication Successful" if cursor.fetchone() else "Access Denied"
     except sqlite3.Error as e:
         return f"Database Fault: {e}"
     finally:
-        if connection:
-            connection.close()
+        if connection: connection.close()
 
-# Symbolic verification log
+# Validation
 print(f"Auth Status: {verify_authentication('admin', 'secure_pass')}")
-```
-
-### ## ◈ Execution & Validation
-```text
-> Database Status: Connected to 'system_auth.db'
-> Query Response: Success. Initializing User Dashboard.
 ```
 
 --- ◈ ---
